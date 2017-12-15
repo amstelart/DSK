@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока options-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.options-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1.25em;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.7em;
+    }
+  }
+
+}

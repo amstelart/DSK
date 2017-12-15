@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока article-image, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article-image {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &--left {
+    float: left;
+    margin: 0 2rem 1.5rem 0;
+  }
+
+  &--right {
+    float: right;
+    margin: 0 0 1.5rem 2rem;
+  }
+
+  &--fw {
+    margin: 1.5rem 0;
+  }
+
+}

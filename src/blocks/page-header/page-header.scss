@@ -5,4 +5,13 @@
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container;
+    padding-top: 1.7em;
+    padding-bottom: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

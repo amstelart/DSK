@@ -1,0 +1,163 @@
+// В этом файле должны быть стили для БЭМ-блока main-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-section {
+
+  $block-name:                &; // #{$block-name}__element
+  font-size: 16px;
+  padding: 2.7em 0;
+
+  &__inner {
+    @include container;
+  }
+
+  &__header {
+    padding-bottom: 1em;
+    &--action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: ($menu-desktop-width - 1)) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'RodchenkoCondC';
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+
+  &__title-caption {
+    color: #6c6c6c;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__application {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__application-header {
+    margin-bottom: 35px;
+  }
+
+  &--main-slider {
+    padding: 0;
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none;
+    }
+  }
+
+  &--advantages {
+    padding: 0;
+    #{$block-name}__inner {
+      padding: 2.7em 0;
+      background-image: url(../img/advantages-bg.png);
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
+    #{$block-name}__title {
+      text-align: left;
+    }
+  }
+
+  &--technology {
+    #{$block-name}__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #{$block-name}__header {
+      text-align: center;
+      flex-shrink: 0;
+      margin: 0 60px;
+    }
+    #{$block-name}__title {
+      font-size: 60px;
+    }
+    #{$block-name}__image {
+
+    }
+  }
+
+  &--overlay-dark {
+    position: relative;
+    background-size: cover;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34, 19, 9, 0.7);
+    }
+    #{$block-name}__inner {
+      position: relative;
+      z-index: 2;
+    }
+    #{$block-name}__title {
+      color: #fff;
+    }
+    #{$block-name}__title-caption {
+      color: #fff;
+    }
+  }
+
+
+  &--overlay-light {
+    position: relative;
+    background-size: cover;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(89, 61, 43, 0.9);
+    }
+    #{$block-name}__inner {
+      position: relative;
+      z-index: 2;
+    }
+    #{$block-name}__title {
+      color: #fff;
+    }
+    #{$block-name}__title-caption {
+      color: #fff;
+    }
+  }
+
+  &--bg-dark {
+    background: #593d2b;
+    #{$block-name}__title {
+      color: #fff;
+    }
+  }
+
+  &--bg-light {
+    background: #f3e5dc;
+  }
+
+  &--bg-lighten {
+    background: #fff9f5;
+  }
+
+}

@@ -29,23 +29,15 @@
   // .field-select,              // обычно, не участвует в группировке
   .field-text {
     margin: 0;
+    flex-grow: 1;
   }
 
   .field-actions {
-
-    &:not(:last-child) .btn {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+    &:not(:first-child) {
+      margin-left: 20px;
     }
-
-    &:not(:first-child) .btn {
-      border-left: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
     .btn {
-
+      width: 100%;
       // &:hover,
       &:focus {
         z-index: 1;           // фокус должен быть красивым
@@ -54,16 +46,8 @@
   }
 
   .field-text {
-
-    &:not(:last-child) .field-text__input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &:not(:first-child) .field-text__input {
-      border-left: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+    &:not(:first-child) {
+      margin-left: 20px;
     }
   }
 

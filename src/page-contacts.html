@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <section class="page-section">
+        <div class="page-section__inner">
+          <div class="page-section__header">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Контакты</a></li>
+            </ul>
+            <h1 class="page-section__title">Контакты</h1>
+            <address class="contacts-info">
+              <strong>Адрес:</strong> 305019, г. Курск, 1-ый Раздельный переулок, 18а <br>
+            <br>
+              <strong>Телефон:</strong> +7 (4712) 50-25-50 <br>
+            <br>
+              <strong>Email:</strong> <a href="mailto:office@srs-rf.ru">office@srs-rf.ru</a>
+            </address>
+
+            <div class="contacts-map">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae1425e7b6964bd023056b85cb8d291d49a2f9a0266283d525ccc3c3aafd2499c&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="main-section main-section--overlay-dark" style="background-image: url(img/zakaz-bg.jpg);">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Заказать бесплатный расчет сметы</h2>
+            <p class="main-section__title-caption">Наши менеджеры свяжутся с вами и уточнят все детали для расчёта</p>
+          </div>
+
+          <form action="" class="form-feedback">
+            <div class="fields-group">
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn btn--main">Отправить</button>
+              </div>
+            </div>
+            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
+          </form>
+
+        </div>
+      </section>
+
+      <!-- <main role="main">
+
+        <h1>NTH start project</h1>
+
+        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
+
+      </main> -->
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

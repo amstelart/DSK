@@ -58,7 +58,19 @@
     "embed-responsive": [],
     "pie-chart": [],
     "fields-group": [],
-    "tooltip": []
+    "tooltip": [],
+    "main-section": [],
+    "info-line": [],
+    "copyrights": [],
+    "project-card": [],
+    "options-list": [],
+    "main-slider": [],
+    "form-feedback": [],
+    "advantages-text": [],
+    "page-section": [],
+    "contacts-info": [],
+    "info-list": [],
+    "article-image": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

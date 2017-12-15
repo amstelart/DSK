@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока advantages-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.advantages-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  color: #fff;
+  column-count: 2;
+  column-gap: 90px;
+  font-size: 1.1em;
+  line-height: 1.6;
+
+  p {
+    margin-top: 0;
+  }
+
+}

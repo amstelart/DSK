@@ -5,7 +5,7 @@ $gray:                        hsl(0, 0%, 50%) !default;
 $gray-lighter:                hsl(0, 0%, 80%) !default;
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family:                 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family--headings:       $font-family !default;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace !default;
 
@@ -37,6 +37,16 @@ $border-radius:               3px !default;
 //   font-weight: 400;
 //   font-style: normal;
 // }
+
+@font-face {
+  font-family: 'RodchenkoCondC';
+  src: url('../fonts/RodchenkoCondC.eot');
+  src: url('../fonts/RodchenkoCondC.eot') format('embedded-opentype'),
+       url('../fonts/RodchenkoCondC.woff2') format('woff2'),
+       url('../fonts/RodchenkoCondC.woff') format('woff'),
+       url('../fonts/RodchenkoCondC.ttf') format('truetype'),
+       url('../fonts/RodchenkoCondC.svg#RodchenkoCondC') format('svg');
+}
 
 
 
@@ -234,4 +244,13 @@ pre {
   width: 100%;
   overflow-x: auto;
   tab-size: 2;
+}
+
+a {
+  color: $link-color;
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+    text-decoration: none;
+  }
 }
