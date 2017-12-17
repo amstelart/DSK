@@ -70,7 +70,13 @@
     "page-section": [],
     "contacts-info": [],
     "info-list": [],
-    "article-image": []
+    "article-image": [],
+    "project-inner": [],
+    "project": [],
+    "project-tabs": [],
+    "architect-note": [],
+    "table-check": [],
+    "home-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

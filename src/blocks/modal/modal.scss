@@ -16,6 +16,9 @@ $transition-time:             0.3s !default;
 
 $z-index-modal:               100 !default;
 
+$toggler-part-height:          2px;
+$toggler-part-bg-color:        #b4b4b4;
+
 .js-modal-open {
   overflow: hidden;
 }
@@ -46,7 +49,7 @@ $z-index-modal:               100 !default;
     height: 100%;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 470px;
       height: auto;
 
       #{$block-name}--open & {
@@ -66,33 +69,84 @@ $z-index-modal:               100 !default;
   }
 
   &__header {
-    padding: 5px 40px 0 10px;
+    padding: 60px 40px 30px 40px;
     flex-shrink: 0;
   }
 
   &__title {
-    margin-top: ($line-height / 2);
-    margin-bottom: ($line-height / 2);
-    font-size: $font-size--h4;
+    margin-top: ($line-height / 4);
+    margin-bottom: ($line-height / 4);
+    font-size: 30px;
+    text-transform: uppercase;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 500;
     color: currentColor;
+  }
+
+  &__caption {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
   }
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 30px;
+    right: 23px;
+
+    > span {
+      display: inline-block;
+      width: 100%;
+      height: $toggler-part-height;
+      background: transparent;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $toggler-part-height;
+        background: $toggler-part-bg-color;
+        transform-origin: 50% 50%;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+
   }
 
   &__body {
-    padding: 0 10px;
+    padding: 0 40px;
     flex-grow: 1;
   }
 
   &__footer {
-    padding: 10px;
+    padding: 0 40px 30px 40px;
     flex-shrink: 0;
+  }
+
+  &__footer-text {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    color: #b4b4b4;
+    a {
+      color: #b4b4b4;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: darken(#b4b4b4, 15%);
+      }
+    }
   }
 
   &__backdrop {
@@ -107,6 +161,12 @@ $z-index-modal:               100 !default;
     @media (min-width: $screen-lg) {
       animation: modal-backdrop-show $transition-time 1;
     }
+  }
+
+  .btn {
+    width: 100%;
+    color: #000;
+    font-weight: 500;
   }
 
   &--open {

@@ -60,7 +60,7 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #000;
+        color: $color-orange;
       }
     }
   }
@@ -69,12 +69,15 @@ $transition-time:             0.3s !default;
     display: block;
     padding: 0.5em;
     text-decoration: none;
-    background-color: #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: $gray-lightest;
+      color: lighten($color-main, 25%);
+      background-color: transparent;
     }
 
     &--lvl-2 {

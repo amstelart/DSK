@@ -19,6 +19,9 @@
   }
 
   &__list-item {
+    .fa {
+      margin-right: 7px;
+    }
     &:not(:first-child) {
       margin-left: 2.5em;
     }

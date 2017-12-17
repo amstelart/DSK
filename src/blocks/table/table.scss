@@ -21,7 +21,7 @@ $field-padding-horizontal:    0.7em !default;
 
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid $border-color;
+  border: 1px solid transparent;
   margin: $line-height 0;
 
   caption {
@@ -36,16 +36,25 @@ $field-padding-horizontal:    0.7em !default;
   td,
   th {
     padding: $field-padding-vertical $field-padding-horizontal;
-    vertical-align: top;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $gray-lightest;
 
+    // &:not(:first-child) {
+    //   border-left: 1px solid $gray-lightest;
+    // }
+  }
+
+  td {
     &:not(:first-child) {
-      border-left: 1px solid $border-color;
+      text-align: center;
     }
   }
 
   th {
     text-align: left;
+    white-space: nowrap;
+    &:not(:first-child) {
+      text-align: center;
+    }
   }
 
   &__header {}

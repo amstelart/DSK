@@ -14,7 +14,7 @@
       <img src="img/logo.png" alt="logo">
     </a>
 
-    <button class="btn btn--outline-main">Заказать звонок</button>
+    <button class="btn btn--outline-main" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
 
     <nav id="main-nav" class="main-nav" role="navigation">
       <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
@@ -29,7 +29,7 @@
             Полезная информация
           </a>
         </li>
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item">
           <a href="#" class="main-nav__link">
             Контакты
           </a>
@@ -57,3 +57,37 @@
   </div>
 
 </footer>
+
+<div id="modal-call" class="modal" tabindex="-1" role="dialog">
+  <div class="modal__dialog" role="document">
+    <div class="modal__content">
+      <div class="modal__header">
+        <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+        <h2 class="modal__title">Остались вопросы?</h2>
+        <p class="modal__caption">Для получения подробной инфомрации позвоните
+        нам по тел.: +7 (4712) 50-25-50 или оставьте заявку</p>
+      </div>
+      <div class="modal__body">
+        <form class="modal-call__form" action="">
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="ИМЯ" id="">
+            </span>
+          </label>
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="">
+            </span>
+          </label>
+          <div class="field-actions">
+            <button class="btn btn--main">Оставить заявку</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal__footer">
+        <p class="modal__footer-text">Оставляя заявку я соглашаюсь на обработку
+        персональных данных. <a href="#">Политика конфиденциальности</a></p>
+      </div>
+    </div>
+  </div>
+</div>

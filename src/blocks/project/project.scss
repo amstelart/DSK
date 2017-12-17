@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока project, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.project {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container;
+  }
+
+  &__header {
+    min-height: 780px;
+    padding: 70px 0;
+  }
+
+}
