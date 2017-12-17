@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/manifest.json">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="info-line info-line--top">
+          <div class="info-line__inner">
+            <ul class="info-line__list">
+              <li class="info-line__list-item"><i class="fa fa-map-marker" aria-hidden="true"></i> г.Курск, 1-й Раздельный пер., 18, офис №2</li>
+              <li class="info-line__list-item"><i class="fa fa-phone" aria-hidden="true"></i> +7(4712) 50-25-50</li>
+              <li class="info-line__list-item"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:dsk@dsk-rf.ru">dsk@dsk-rf.ru</a></li>
+              <li class="info-line__list-item"><a href="page-contacts.html">Схема проезда</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <button class="btn btn--outline-main" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Технология строительства
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="page-info.html" class="main-nav__link">
+                  Полезная информация
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page-contacts.html" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="main-section main-section--main-slider">
+        <div class="owl-carousel main-slider" id="main-slider">
+          <div class="main-slider__item" style="background-image: url(img/demo-slide-image-01.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Агрономическое <br>сопровождение</div>
+              <p class="main-slider__caption">Наши специалисты порекомендуют оптимальную систему<br>
+              защиты растений на любой культуре</p>
+            </div>
+          </div>
+          <div class="main-slider__item" style="background-image: url(img/demo-slide-image-01.jpg);">
+            <div class="main-section__inner">
+              <div class="main-slider__title">Семена гибрида <br>подсолнечника <br>5500 рублей за п.е.</div>
+              <p class="main-slider__caption">Акция действует до Нового Года при покупке от 1000 п.е., при 100% предоплате. <br>
+              В одной посевной единице 150 000 шт семян.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--bg-dark">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Проекты загородных домов и коттеджей</h2>
+          </div>
+          <div class="project-card">
+            <div class="project-card__info">
+              <div class="project-card__info-header">
+                <h5 class="project-card__title">Одноэтажный дом</h5>
+                <p class="project-card__description">Компактный , но просторный внутри дом,  с проникающим со всех сторон солнечным светом, создаёт атмосферу уюта и радости его обладателям.</p>
+              </div>
+              <div class="project-card__info-options">
+                <ul class="options-list">
+                  <li class="options-list__item">110 м<sup>2</sup></li>
+                  <li class="options-list__item">2 спальни</li>
+                  <li class="options-list__item">1 сан. узел</li>
+                  <li class="options-list__item">Выход на терассу</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-card__media">
+              <img src="img/project-card-demo-image.jpg" alt="дом">
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__info">
+              <div class="project-card__info-header">
+                <h5 class="project-card__title">Одноэтажный дом</h5>
+                <p class="project-card__description">Компактный , но просторный внутри дом,  с проникающим со всех сторон солнечным светом, создаёт атмосферу уюта и радости его обладателям.</p>
+              </div>
+              <div class="project-card__info-options">
+                <ul class="options-list">
+                  <li class="options-list__item">110 м<sup>2</sup></li>
+                  <li class="options-list__item">2 спальни</li>
+                  <li class="options-list__item">1 сан. узел</li>
+                  <li class="options-list__item">Выход на терассу</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-card__media">
+              <img src="img/project-card-demo-image.jpg" alt="дом">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--bg-light">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Индивидуальное проектирование домов</h2>
+          </div>
+          <form action="" class="form-feedback">
+            <div class="fields-group">
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn btn--main">Отправить</button>
+              </div>
+            </div>
+            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных.<br> <a href="#">Политика конфиденциальности</a></p>
+          </form>
+          <div class="main-section__image">
+            <img src="img/main-section-image-01.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--advantages main-section--bg-dark">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Преимущества ДСК</h2>
+          </div>
+          <div class="advantages-text">
+            <p>Применение ферм ДСК позволяет исключить несущие стены внутри дома, что создаёт пространство для свободной планировки, как при строительстве дома, так и в отдалённой перспективе. Это уникальное свойство наших каркасных домов, ценность которого будет  увеличиваться с годами эксплуатации дома
+            В домокомплект входят все несущие конструкции дома - стеновые панели, кровельные фермы и фермы перекрытий. Все элементы домокомплекта имеют высокое качество, что позволяет собрать каркас дома за несколько дней на готовый фундамент</p>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--technology main-section--bg-lighten">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Технология строительства</h2>
+            <a href="#" class="btn btn--outline-main">Перейти</a>
+          </div>
+          <div class="main-section__image">
+            <img src="img/main-section-image-02.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--mounting main-section--overlay-light" style="background-image: url(img/mounting-bg.jpg);">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Монтаж домокомплекта ДСК</h2>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--bg-light">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Приглашаем партнёров к сотрудничеству</h2>
+            <p class="main-section__title-caption">Предлагаем готовые стеновые панели или готовый домокомплект</p>
+          </div>
+          <form action="" class="form-feedback">
+            <div class="fields-group">
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn btn--main">Отправить</button>
+              </div>
+            </div>
+            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных. <br><a href="#">Политика конфиденциальности</a></p>
+          </form>
+        </div>
+      </section>
+      <section class="main-section main-section--bg-lighten">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">География поставок</h2>
+          </div>
+          <div id="map" style="border: 1px solid #e9b460;">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fEzZNgF0J6cPbtRShNyBNIlrUXnFlt3U&width=100%25&height=600&lang=ru_RU&sourceType=constructor&scroll=false"></script>
+          </div>
+        </div>
+      </section>
+      <section class="main-section main-section--overlay-dark" style="background-image: url(img/zakaz-bg.jpg);">
+        <div class="main-section__inner">
+          <div class="main-section__header">
+            <h2 class="main-section__title">Заказать бесплатный расчет сметы</h2>
+            <p class="main-section__title-caption">Наши менеджеры свяжутся с вами и уточнят все детали для расчёта</p>
+          </div>
+          <form action="" class="form-feedback">
+            <div class="fields-group">
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn btn--main">Отправить</button>
+              </div>
+            </div>
+            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных.<br> <a href="#">Политика конфиденциальности</a></p>
+          </form>
+        </div>
+      </section>
+      <!-- <main role="main">
+        <h1>NTH start project</h1>
+        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
+      </main> -->
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          <button class="btn btn--outline-main" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Технология строительства
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Полезная информация
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="info-line info-line--bottom">
+          <div class="info-line__inner">
+            <ul class="info-line__list">
+              <li class="info-line__list-item"><i class="fa fa-map-marker" aria-hidden="true"></i> г.Курск, 1-й Раздельный пер., 18, офис №2</li>
+              <li class="info-line__list-item"><i class="fa fa-phone" aria-hidden="true"></i> +7(4712) 50-25-50</li>
+              <li class="info-line__list-item"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:dsk@dsk-rf.ru">dsk@dsk-rf.ru</a></li>
+              <li class="info-line__list-item"><a href="page-contacts.html">Схема проезда</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrights">
+          <div class="copyrights__inner">
+            <span class="copyrights__dev">Разработка - <a href="http://www.2showbiz.ru/">Showbiz Studio</a></span>
+          </div>
+        </div>
+      </footer>
+      <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+              <h2 class="modal__title">Остались вопросы?</h2>
+              <p class="modal__caption">Для получения подробной инфомрации позвоните
+              нам по тел.: +7 (4712) 50-25-50 или оставьте заявку</p>
+            </div>
+            <div class="modal__body">
+              <form class="modal-call__form" action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="ИМЯ" id="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--main">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal__footer">
+              <p class="modal__footer-text">Оставляя заявку я соглашаюсь на обработку
+              персональных данных. <a href="#">Политика конфиденциальности</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
