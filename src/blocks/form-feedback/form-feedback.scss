@@ -13,4 +13,11 @@
     background: transparent;
   }
 
+  @media (max-width: ($screen-md - 1)) {
+    .fields-group {
+      max-width: 450px;
+      margin: auto;
+    }
+  }
+
 }

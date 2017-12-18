@@ -32,12 +32,29 @@
 
   &--top {
     background: #f3e5dc;
+    @media (max-width: ($screen-md - 1)) {
+      display: none;
+    }
   }
 
   &--bottom {
     background: #fff;
     padding: 1.8em 0;
     border-top: 2px solid #f3e5dc;
+
+    @media (max-width: ($screen-md - 1)) {
+      #{$block-name}__list {
+        display: block;
+        text-align: center;
+      }
+      #{$block-name}__list-item {
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+
   }
 
 }

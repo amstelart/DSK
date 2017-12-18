@@ -11,6 +11,10 @@
   align-items: flex-start;
   margin-bottom: ($line-height / 2);
 
+  @media (max-width: ($screen-md - 1)) {
+    flex-direction: column;
+  }
+
   .btn,
   select,                     // обычно, не участвует в группировке
   input {
@@ -30,11 +34,21 @@
   .field-text {
     margin: 0;
     flex-grow: 1;
+    @media (max-width: ($screen-md - 1)) {
+      width: 100%;
+      flex-grow: 0;
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
   }
 
   .field-actions {
     &:not(:first-child) {
       margin-left: 20px;
+      @media (max-width: ($screen-md - 1)) {
+        margin-left: 0;
+      }
     }
     .btn {
       width: 100%;
@@ -48,6 +62,9 @@
   .field-text {
     &:not(:first-child) {
       margin-left: 20px;
+      @media (max-width: ($screen-md - 1)) {
+        margin-left: 0;
+      }
     }
   }
 

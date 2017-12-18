@@ -11,7 +11,33 @@
     padding-top: 1.7em;
     padding-bottom: 1.4em;
     display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .main-nav__toggler {
+      position: absolute;
+      right: 15px;
+      top: 1.9em;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      padding-right: 60px;
+      .main-nav {
+        flex-basis: 100%;
+      }
+    }
+    @media (max-width: ($screen-md - 1)) {
+      padding-right: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
   }
 }

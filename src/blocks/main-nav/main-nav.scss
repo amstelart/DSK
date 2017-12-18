@@ -29,6 +29,7 @@ $transition-time:             0.3s !default;
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-top: 15px;
 
     // мобильный вид списка
     @media (max-width: ($menu-desktop-width - 1)) {

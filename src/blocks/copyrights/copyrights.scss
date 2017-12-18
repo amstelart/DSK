@@ -13,4 +13,8 @@
     @include container;
   }
 
+  @media (max-width: ($screen-md - 1)) {
+    text-align: center;
+  }
+
 }
