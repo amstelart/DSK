@@ -1,16 +1,12 @@
-// В этом файле должны быть стили для БЭМ-блока form-feedback, его элементов,
+// В этом файле должны быть стили для БЭМ-блока main-video, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.form-feedback {
+.main-video {
 
   $block-name:                &; // #{$block-name}__element
 
-  max-width: 710px;
+  max-width: 750px;
   margin: auto;
-
-  .field-text__input {
-    background: transparent;
-  }
 
 }

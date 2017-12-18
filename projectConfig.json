@@ -76,7 +76,9 @@
     "project-tabs": [],
     "architect-note": [],
     "table-check": [],
-    "home-card": []
+    "home-card": [],
+    "mouse": [],
+    "main-video": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

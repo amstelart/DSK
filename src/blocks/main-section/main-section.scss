@@ -49,6 +49,7 @@
 
   &--main-slider {
     padding: 0;
+    position: relative;
     @media (max-width: ($menu-desktop-width - 1)) {
       display: none;
     }
@@ -57,7 +58,7 @@
   &--advantages {
     padding: 0;
     #{$block-name}__inner {
-      padding: 2.7em 0;
+      padding: 2.7em 0 6em;
       background-image: url(../img/advantages-bg.png);
       background-repeat: no-repeat;
       background-position: center left;
@@ -101,7 +102,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(34, 19, 9, 0.7);
+      background: rgba(34, 19, 9, 0.9);
     }
     #{$block-name}__inner {
       position: relative;
@@ -112,6 +113,19 @@
     }
     #{$block-name}__title-caption {
       color: #fff;
+    }
+    .form-feedback {
+      text-align: center;
+      p,a {
+        color: #cfaa93;
+        font-size: 14px;
+      }
+      input {
+        color: #fff;
+      }
+      input::placeholder {
+        color: #fff;
+      }
     }
   }
 
@@ -154,10 +168,80 @@
 
   &--bg-light {
     background: #f3e5dc;
+    #{$block-name}__title {
+      color: #9a5821;
+    }
+    .form-feedback {
+      p,a {
+        color: #cfaa93;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
   }
 
   &--bg-lighten {
     background: #fff9f5;
+  }
+
+  &--projects {
+    padding-bottom: 150px;
+  }
+
+  &--left-img {
+    #{$block-name}__inner {
+      position: relative;
+      padding-left: 425px;
+      text-align: right;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -100px;
+        top: -160px;
+        width: 603px;
+        height: 366px;
+        background-image: url(../img/main-section-image-01.png);
+      }
+    }
+    #{$block-name}__title {
+      text-align: right;
+      color: #9a5821;
+    }
+    .form-feedback {
+      p {
+        color: #cfaa93;
+        font-size: 14px;
+      }
+      a {
+        color: #cfaa93;
+      }
+    }
+  }
+
+  &--right-img {
+    padding: 90px 0;
+    #{$block-name}__inner {
+      position: relative;
+      padding-right: 600px;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 100;
+        right: -10px;
+        top: -160px;
+        width: 611px;
+        height: 480px;
+        background-image: url(../img/main-section-image-02.png);
+      }
+    }
+    #{$block-name}__header {
+      text-align: center;
+    }
+    #{$block-name}__title {
+      font-size: 60px;
+    }
   }
 
 }
