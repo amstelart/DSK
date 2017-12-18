@@ -9,7 +9,10 @@
   @include row;
 
   &__card {
-    @include make-col(4);
+    @include col();
+    @include col(sm, 6);
+    @include col(md, 4);
+    @include col(lg, 4);
     margin-bottom: 20px;
   }
   &__card-image {
