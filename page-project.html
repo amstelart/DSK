@@ -102,10 +102,27 @@
                 </div>
                 <div class="home-card__body">
                   <ul class="options-list">
-                    <li class="options-list__item">110 м<sup>2</sup></li>
-                    <li class="options-list__item">2 спальни</li>
-                    <li class="options-list__item">1 сан. узел</li>
-                    <li class="options-list__item">Выход на терассу</li>
+                    <li class="options-list__item">
+                      <svg class="option-list__icon" width="32" height="32">
+                        <use xlink:href="img/sprite-svg.svg#icon-ruler"/>
+                      </svg>
+                      110 м<sup>2</sup>
+                    </li>
+                    <li class="options-list__item">
+                      <svg class="option-list__icon" width="32" height="32">
+                        <use xlink:href="img/sprite-svg.svg#icon-bed"/>
+                      </svg>
+                      2 спальни</li>
+                    <li class="options-list__item">
+                      <svg class="option-list__icon" width="32" height="32">
+                        <use xlink:href="img/sprite-svg.svg#icon-bath"/>
+                      </svg>
+                      1 сан. узел</li>
+                    <li class="options-list__item">
+                      <svg class="option-list__icon" width="32" height="32">
+                        <use xlink:href="img/sprite-svg.svg#icon-terrace"/>
+                      </svg>
+                      Выход на терассу</li>
                   </ul>
                 </div>
                 <div class="home-card__footer">
@@ -136,9 +153,22 @@
             <div class="tabs__content-wrapper">
               <div class="tabs__content-item  tabs__content-item--active" id="demo-tab-01" role="tabpanel">
                 <div class="project-tabs__inner">
-                  <a class="btn btn--outline-main" href="#">1 этаж</a>
-                  <a class="btn btn--outline-main" href="#">2 этаж</a>
-                  <img src="img/plan-01.jpg" alt="">
+                  <div class="owl-carousel plan-carousel">
+                    <div class="item" data-hash="floor-01">
+                      <a data-fancybox="images" href="img/mansard-plan-1floor.jpg">
+                        <img src="img/mansard-plan-1floor.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="item" data-hash="floor-02">
+                      <a data-fancybox="images" href="img/mansard-plan-2floor.jpg">
+                        <img src="img/mansard-plan-2floor.jpg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="owl-hash-nav">
+                    <a class="btn btn--outline-main" href="#floor-01">3-х комнатная</a>
+                    <a class="btn btn--outline-main" href="#floor-02">Студия</a>
+                  </div>
                 </div>
               </div>
               <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
@@ -201,10 +231,28 @@
               </div>
               <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
                 <div class="project-tabs__inner">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, est!</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis totam perferendis repudiandae consequuntur magni laudantium perspiciatis natus voluptatem modi. Earum repellat ipsa nobis magni quas labore nihil accusamus dolor beatae inventore, voluptas, illum reprehenderit asperiores debitis iste possimus adipisci ullam repellendus. Libero neque, aperiam architecto totam quod molestiae, cumque hic ratione autem odit asperiores voluptatibus iste tenetur impedit dolore ipsam fugit accusamus adipisci. Magni, iure, amet! Exercitationem aliquam fuga harum tempore accusantium placeat, laudantium in cumque magni et eum maxime vitae eos ullam reprehenderit blanditiis similique perspiciatis repellendus consequatur dolorum dolor dolorem eaque itaque. Facilis quam architecto saepe debitis.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis totam perferendis repudiandae consequuntur magni laudantium perspiciatis natus voluptatem modi. Earum repellat ipsa nobis magni quas labore nihil accusamus dolor beatae inventore, voluptas, illum reprehenderit asperiores debitis iste possimus adipisci ullam repellendus. Libero neque, aperiam architecto totam quod molestiae, cumque hic ratione autem odit asperiores voluptatibus iste tenetur impedit dolore ipsam fugit accusamus adipisci. Magni, iure, amet! Exercitationem aliquam fuga harum tempore accusantium placeat, laudantium in cumque magni et eum maxime vitae eos ullam reprehenderit blanditiis similique perspiciatis repellendus consequatur dolorum dolor dolorem eaque itaque. Facilis quam architecto saepe debitis.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis totam perferendis repudiandae consequuntur magni laudantium perspiciatis natus voluptatem modi. Earum repellat ipsa nobis magni quas labore nihil accusamus dolor beatae inventore, voluptas, illum reprehenderit asperiores debitis iste possimus adipisci ullam repellendus. Libero neque, aperiam architecto totam quod molestiae, cumque hic ratione autem odit asperiores voluptatibus iste tenetur impedit dolore ipsam fugit accusamus adipisci. Magni, iure, amet! Exercitationem aliquam fuga harum tempore accusantium placeat, laudantium in cumque magni et eum maxime vitae eos ullam reprehenderit blanditiis similique perspiciatis repellendus consequatur dolorum dolor dolorem eaque itaque. Facilis quam architecto saepe debitis.</p>
+                  <div class="image-gallery image-gallery--facades">
+                    <div class="image-gallery__item">
+                      <a data-fancybox="images" href="img/mansard-facade-01.jpg">
+                        <img src="img/mansard-facade-01.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="image-gallery__item">
+                      <a data-fancybox="images" href="img/mansard-facade-02.jpg">
+                        <img src="img/mansard-facade-02.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="image-gallery__item">
+                      <a data-fancybox="images" href="img/mansard-facade-03.jpg">
+                        <img src="img/mansard-facade-03.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="image-gallery__item">
+                      <a data-fancybox="images" href="img/mansard-facade-04.jpg">
+                        <img src="img/mansard-facade-04.jpg" alt="">
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
