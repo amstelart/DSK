@@ -11,6 +11,19 @@ $( document ).ready(function() {
     center: true
   });
 
+  $(".plan-carousel").owlCarousel({
+    items:1,
+    loop:false,
+    dots: false,
+    nav: false,
+    center:true,
+    animateOut: 'fadeOut',
+    margin:10,
+    URLhashListener:true,
+    autoplayHoverPause:true,
+    startPosition: '#floor-01'
+  });
+
 });
 
 // Изоляция без jQuery

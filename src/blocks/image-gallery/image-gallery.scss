@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока image-gallery, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.image-gallery {
+
+  $block-name:                &; // #{$block-name}__element
+  @include row;
+
+  &--facades {
+    #{$block-name}__item {
+      @include col();
+      @include col(md, 6);
+    }
+  }
+
+}

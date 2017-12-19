@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока plan-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.plan-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 30px;
+
+
+}
+
+.owl-hash-nav {
+  .btn:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}

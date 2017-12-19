@@ -8,6 +8,15 @@
 
   display: flex;
   margin-bottom: 2em;
+  text-decoration: none;
+  border: 10px solid transparent;
+
+  &:hover,
+  &:focus {
+    border-color: $color-orange;
+    color: inherit;
+  }
+
   @media (max-width: ($screen-md - 1)) {
     flex-direction: column;
     #{$block-name}__info {
