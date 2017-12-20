@@ -53,39 +53,39 @@ $dot-background-active:	$color-base !default;
       border-radius: 3px;
       position: absolute;
       margin: 0;
-      width: 40px;
-      height: 60px;
+      width: 60px;
+      height: 90px;
       padding: 17px 0;
       border-radius: 0;
       color: #000;
-      background: rgba(255, 255, 255, 0.8);
+      background: transparent;
 
       svg {
 				transition: .2s;
-				stroke: #000;
+				stroke: #fff;
 			}
 
       &:hover {
-        background: $color-main;
-        color: #fff;
+        background: transparent;
+        color: $color-orange;
         text-decoration: none;
         svg {
           transition: .2s;
-          stroke: #fff;
+          stroke: $color-orange;
         }
       }
     }
     .owl-prev {
       left: 0;
-      top: 40%;
-      -webkit-transform: translate(0, -60%);
-      transform: translate(0, -60%);
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
     }
     .owl-next {
       right: 0;
-      top: 40%;
-      -webkit-transform: translate(0, -60%);
-      transform: translate(0, -60%);
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
     }
     .disabled {
       opacity: $nav-disabled-opacity;
