@@ -24,6 +24,17 @@ $( document ).ready(function() {
     startPosition: '#floor-01'
   });
 
+  //toggle catalog filter
+  $('.owl-hash-nav__item').click(function () {
+    $(this).toggleClass('owl-hash-nav__item--active')
+  });
+
+  //toggle catalog filter end
+  // $('.owl-hash-nav .owl-hash-nav__item').click(function () {
+  //   $("owl-hash-nav__item").removeClass("owl-hash-nav__item--active");
+  //   $(this).parent().toggleClass('owl-hash-nav__item--active');
+  // });
+
 });
 
 // Изоляция без jQuery
