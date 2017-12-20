@@ -24,16 +24,10 @@ $( document ).ready(function() {
     startPosition: '#floor-01'
   });
 
-  //toggle catalog filter
-  $('.owl-hash-nav__item').click(function () {
-    $(this).toggleClass('owl-hash-nav__item--active')
+  $('.owl-hash-nav .btn').click(function () {
+    $('.owl-hash-nav .btn').removeClass('btn--active');
+    $(this).addClass('btn--active');
   });
-
-  //toggle catalog filter end
-  // $('.owl-hash-nav .owl-hash-nav__item').click(function () {
-  //   $("owl-hash-nav__item").removeClass("owl-hash-nav__item--active");
-  //   $(this).parent().toggleClass('owl-hash-nav__item--active');
-  // });
 
 });
 
