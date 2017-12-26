@@ -6,11 +6,27 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  max-width: 710px;
+  max-width: 910px;
   margin: auto;
+
+  .field-text__name {
+    color: #cfaa93;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .field-text__help-text {
+    color: #cfaa93;
+    text-align: left;
+  }
 
   .field-text__input {
     background: transparent;
+  }
+
+  p {
+    margin-top: 25px;
   }
 
   @media (max-width: ($screen-md - 1)) {

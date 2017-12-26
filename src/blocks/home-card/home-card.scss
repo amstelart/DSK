@@ -6,33 +6,53 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  max-width: 400px;
+  // max-width: 400px;
+  display: flex;
+  width: 100%;
+  @media (max-width: ($screen-lg - 1)) {
+    flex-direction: column;
+  }
 
   &__header {
     overflow: hidden;
     text-align: center;
     background: #e9a122;
+    padding: 10px 60px;
+    flex-shrink: 0;
   }
   &__title {
-    margin: 20px 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &__cost {
+    text-transform: uppercase;
   }
   &__body {
-    background: $color-main;
+    background: rgba(60, 35, 19, 0.9);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
     .options-list {
       color: #fff;
-      padding: 30px 45px;
+      display: flex;
+      flex-basis: 100%;
+      justify-content: space-between;
+      @media (max-width: ($screen-md - 1)) {
+        flex-direction: column;
+      }
+    }
+    .options-list__item {
+      margin-bottom: 0;
+      font-weight: 400;
+      @media (max-width: ($screen-md - 1)) {
+        padding: 10px 0;
+      }
     }
     .option-list__icon {
       fill: #fff;
       margin-right: 10px;
     }
-  }
-  &__footer {
-    background: #fff;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    padding: 25px 0;
   }
 
 }

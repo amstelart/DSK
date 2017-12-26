@@ -24,6 +24,11 @@ $( document ).ready(function() {
     startPosition: '#floor-01'
   });
 
+  $('.owl-hash-nav .btn').click(function () {
+    $('.owl-hash-nav .btn').removeClass('btn--active');
+    $(this).addClass('btn--active');
+  });
+
 });
 
 // Изоляция без jQuery

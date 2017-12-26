@@ -209,7 +209,20 @@
       position: relative;
       padding-left: 425px;
       text-align: right;
-      @media (max-width: ($screen-md - 1)) {
+      .fields-group {
+        margin-bottom: 0;
+        .field-text,
+        .field-actions {
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
+        @media (max-width: ($screen-xl - 1)) {
+          .field-actions {
+            margin-left: 0;
+          }
+        }
+      }
+      @media (max-width: ($screen-lg - 1)) {
         padding-left: 15px;
         #{$block-name}__title,
         #{$block-name}__header {
@@ -227,7 +240,7 @@
         background-image: url(../img/main-section-image-01.png);
         background-size: contain;
         background-repeat: no-repeat;
-        @media (max-width: ($screen-md - 1)) {
+        @media (max-width: ($screen-lg - 1)) {
           position: static;
           width: 300px;
           height: 200px;

@@ -14,7 +14,51 @@
 
     <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+      <header class="page-header" role="banner">
+
+        <div class="info-line info-line--top">
+          <div class="info-line__inner">
+            <ul class="info-line__list">
+              <li class="info-line__list-item"><i class="fa fa-map-marker" aria-hidden="true"></i> г.Курск, 1-й Раздельный пер., 18, офис №2</li>
+              <li class="info-line__list-item"><i class="fa fa-phone" aria-hidden="true"></i> +7(4712) 50-25-50</li>
+              <li class="info-line__list-item"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:dsk@dsk-rf.ru">dsk@dsk-rf.ru</a></li>
+              <li class="info-line__list-item"><a href="page-contacts.html">Схема проезда</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="page-header__inner">
+
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+          </a>
+
+          <button class="btn btn--outline-main" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
+
+          <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="page-technology.html" class="main-nav__link">
+                  Технология строительства
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page-info.html" class="main-nav__link">
+                  Полезная информация
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="page-contacts.html" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+      </header>
 
       <section class="main-section main-section--main-slider">
         <div class="owl-carousel main-slider" id="main-slider">
@@ -25,7 +69,7 @@
               защиты растений на любой культуре</p> -->
             </div>
           </div>
-          <div class="main-slider__item" style="background-image: url(img/slide-image-02.png);">
+          <div class="main-slider__item" style="background-image: url(img/slide-image-02.jpg);">
             <div class="main-section__inner">
               <div class="main-slider__title">Свой дом <br>по цене квартиры</div>
               <!-- <p class="main-slider__caption">Акция действует до Нового Года при покупке от 1000 п.е., при 100% предоплате. <br>
@@ -85,7 +129,7 @@
               </div>
             </div>
             <div class="project-card__media">
-              <img src="img/project-card-demo-image.jpg" alt="дом">
+              <img src="img/project-card-image-01.jpg" alt="дом">
             </div>
           </a>
 
@@ -122,7 +166,7 @@
               </div>
             </div>
             <div class="project-card__media">
-              <img src="img/project-card-demo-image.jpg" alt="дом">
+              <img src="img/project-card-image-02.jpg" alt="дом">
             </div>
           </a>
 
@@ -197,7 +241,7 @@
 
           <div class="main-video">
             <div class="embed-responsive">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen=""></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Aeuj1aDSGuQ?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -255,31 +299,34 @@
             <div class="fields-group">
               <label class="field-text">
                 <span class="field-text__input-wrap">
+                  <!-- <label class="field-text__name" for="demo-field">Имя</label> -->
                   <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                  <span class="field-text__help-text">Укажите ваше имя</span>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
+                  <!-- <label class="field-text__name" for="demo-field">Телефон</label> -->
                   <input class="field-text__input" type="text" placeholder="Телефон" id="" name="">
+                  <span class="field-text__help-text">Укажите ваш номер телефона</span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <!-- <label class="field-text__name" for="demo-field">Удобное время для звонка</label> -->
+                  <input class="field-text__input" type="time" placeholder="Удобное время для звонка" id="" name="">
+                  <span class="field-text__help-text">Укажите удобное вам время для звонка</span>
                 </span>
               </label>
               <div class="field-actions">
                 <button class="btn btn--main">Отправить</button>
               </div>
             </div>
-            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных.<br> <a href="#">Политика конфиденциальности</a></p>
+            <p>Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a></p>
           </form>
 
         </div>
       </section>
-
-      <!-- <main role="main">
-
-        <h1>NTH start project</h1>
-
-        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
-
-      </main> -->
 
     </div>
 

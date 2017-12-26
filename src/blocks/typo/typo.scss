@@ -251,6 +251,7 @@ a {
   &:hover,
   &:focus {
     color: $link-color--hover;
+    transition: all 0.3s;
     text-decoration: none;
   }
 }

@@ -11,7 +11,7 @@
   align-items: flex-start;
   margin-bottom: ($line-height / 2);
 
-  @media (max-width: ($screen-md - 1)) {
+  @media (max-width: ($screen-lg - 1)) {
     flex-direction: column;
   }
 
@@ -34,7 +34,7 @@
   .field-text {
     margin: 0;
     flex-grow: 1;
-    @media (max-width: ($screen-md - 1)) {
+    @media (max-width: ($screen-lg - 1)) {
       width: 100%;
       flex-grow: 0;
       &:not(:first-child) {
@@ -46,7 +46,7 @@
   .field-actions {
     &:not(:first-child) {
       margin-left: 20px;
-      @media (max-width: ($screen-md - 1)) {
+      @media (max-width: ($screen-lg - 1)) {
         margin-left: 0;
       }
     }
@@ -62,7 +62,7 @@
   .field-text {
     &:not(:first-child) {
       margin-left: 20px;
-      @media (max-width: ($screen-md - 1)) {
+      @media (max-width: ($screen-lg - 1)) {
         margin-left: 0;
       }
     }

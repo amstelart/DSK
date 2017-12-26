@@ -11,8 +11,13 @@
 }
 
 .owl-hash-nav {
+  .btn--active {
+    color: #fff;
+    background-color: ($color-orange);
+    border-color: ($color-orange);
+  }
   margin-bottom: 25px;
-  .btn:not(:last-of-type) {
+  .owl-hash-nav__item:not(:last-of-type) {
     margin-right: 15px;
   }
 }
