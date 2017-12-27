@@ -7,7 +7,13 @@
   $block-name:                &; // #{$block-name}__element
 
   max-width: 910px;
-  margin: auto;
+  @include row;
+
+  &__field {
+    @include col();
+    @include col(md, 3);
+    margin-top: 0;
+  }
 
   .field-text__name {
     color: #cfaa93;
