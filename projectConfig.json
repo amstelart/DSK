@@ -80,7 +80,8 @@
     "mouse": [],
     "main-video": [],
     "image-gallery": [],
-    "plan-carousel": []
+    "plan-carousel": [],
+    "tech": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
